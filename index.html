@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+    <script>
+        var rand=Math.floor(Math.random() * 1000);
+        document.write("Randomly generated number: "+rand);
+
+        var tho=Math.floor(rand*1);
+        var hun=Math.floor((rand/100));
+        var ten=Math.floor((rand%100)/10);
+        var one=Math.floor(rand%10);
+
+        if(rand==0){
+            document.write("<br> Breakdown: 0, 0, 0, 0")
+        }
+        else if (tho==1000){
+           document.write("<br> Breakdown: "+tho+", 0, 0, 0");
+        }
+        else if(hun==0){
+            document.write("<br> Breakdown: "+ten+"0, "+one)
+        }
+        else if(ten==0){
+            document.write("<br> Breakdown: "+hun+"00, "+ten+", "+one);
+        } else if(one==0){
+            document.write("<br> Breakdown: "+hun+"00, "+ten+"0, 0");
+        } else{
+            document.write("<br> Breakdown: "+hun+"00, "+ten+"0, "+one);
+        }
+
+        var date=new Date();
+        document.write("<br>"+date);
+
+    </script>
+</body>
+</html>
